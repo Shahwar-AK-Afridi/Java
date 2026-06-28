@@ -1,0 +1,11 @@
+// write your code here
+function reformatName(first, last){
+    
+    var fullName = last + ", " + first;
+    return fullName;
+}
+
+var result = reformatName("Susan", "Rodger");
+print(result);
+result = reformatName("Robert", "Duvall");
+print(result);

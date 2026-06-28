@@ -1,0 +1,24 @@
+// write your code here
+
+var newImage = new SimpleImage(200,200);
+var newImage2 = new SimpleImage(200,200);
+
+for(var pixel of newImage.values()){
+    
+    pixel.setRed(255);
+    pixel.setGreen(255);
+    pixel.setBlue(0);
+    
+}
+
+print(newImage);
+
+for(var pixel of newImage2.values()){
+    
+    pixel.setRed(255);
+    pixel.setGreen(0);
+    pixel.setBlue(255);
+    
+}
+
+print(newImage2);

@@ -1,0 +1,11 @@
+#BlueJ class context
+comment0.target=GreyImages
+comment1.params=imageColor
+comment1.target=edu.duke.ImageResource\ makeGrey(edu.duke.ImageResource)
+comment2.params=
+comment2.target=void\ testSaveGrey()
+comment3.params=
+comment3.target=void\ selectMultipleFiles()
+comment4.params=
+comment4.target=void\ testSelectMultipleFiles()
+numComments=5

@@ -1,0 +1,14 @@
+// write your code here
+
+function printPixel(namefile, xpos, ypos){
+    
+    var image = new SimpleImage(namefile);
+    var pixel = image.getPixel(xpos,ypos);
+    print("Red: "+pixel.getRed());
+    print("Green: "+pixel.getGreen());
+    print("Blue: "+pixel.getBlue());
+    
+}
+
+printPixel("drewgreen.png",10, 10);
+printPixel("drewgreen.png",250, 500);

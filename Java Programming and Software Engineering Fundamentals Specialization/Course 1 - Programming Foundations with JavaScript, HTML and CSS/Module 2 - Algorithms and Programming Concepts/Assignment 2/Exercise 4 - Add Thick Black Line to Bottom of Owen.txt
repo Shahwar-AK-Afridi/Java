@@ -1,0 +1,25 @@
+// write your code here
+
+function redImage(inputImage, rows){
+    
+    var newImage = new SimpleImage(inputImage);
+    
+    var rowsToBlack = newImage.getHeight() - rows; 
+    
+    for(var pixel of newImage.values()){
+        
+        if(pixel.getY() >= rowsToBlack){
+            
+            pixel.setRed(0);
+            pixel.setGreen(0);
+            pixel.setBlue(0);
+            
+        }
+        
+    }
+    
+    return newImage;
+}
+    
+
+print(redImage("astrachan.jpg", 10));

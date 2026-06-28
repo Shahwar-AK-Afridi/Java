@@ -1,0 +1,19 @@
+// write your code here
+
+function redImage(inputImage){
+    
+    var newImage = new SimpleImage(inputImage);
+    
+    for(var pixel of newImage.values()){
+        
+        if(pixel.getRed()>70){
+            
+            pixel.setRed(70);
+        }
+        
+    }
+    
+    return newImage;
+}
+
+print(redImage("eastereggs.jpg"));

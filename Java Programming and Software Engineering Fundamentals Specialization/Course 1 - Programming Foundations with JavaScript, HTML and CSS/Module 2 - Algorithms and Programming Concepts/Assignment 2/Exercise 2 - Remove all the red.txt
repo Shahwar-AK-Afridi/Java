@@ -1,0 +1,17 @@
+// write your code here
+
+function redImage(inputImage){
+    
+    var newImage = new SimpleImage(inputImage);
+    
+    for(var pixel of newImage.values()){
+        
+        pixel.setRed(0);
+        
+        
+    }
+    
+    return newImage;
+}
+
+print(redImage("chapel.png"));

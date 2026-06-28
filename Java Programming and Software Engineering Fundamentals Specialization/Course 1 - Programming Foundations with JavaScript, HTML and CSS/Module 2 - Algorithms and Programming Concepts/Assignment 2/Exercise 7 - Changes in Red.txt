@@ -1,0 +1,21 @@
+
+function changeRed(width, height){
+    
+    var newImage = new SimpleImage(width,height);
+    var redCounter = 0;
+    for(var pixel of newImage.values()){
+        
+        pixel.setRed(redCounter);
+        redCounter += 1;
+        
+        if(redCounter === width){
+            
+            redCounter = 0;
+        }
+        
+    }
+    return newImage;
+}
+
+var result = changeRed(256,200);
+print(result);

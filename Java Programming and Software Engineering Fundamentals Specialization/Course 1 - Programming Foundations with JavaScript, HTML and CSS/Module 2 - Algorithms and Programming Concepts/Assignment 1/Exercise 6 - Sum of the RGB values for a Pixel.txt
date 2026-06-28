@@ -1,0 +1,16 @@
+// write your code here
+
+function sumPixel(namefile, xpos, ypos){
+    
+    var image = new SimpleImage(namefile);
+    var pixel = image.getPixel(xpos,ypos);
+    
+    var pixelSum = pixel.getRed() + pixel.getGreen() + pixel.getBlue();
+    
+    return pixelSum;
+}
+
+var answer = sumPixel("drewgreen.png", 250, 500);
+print(answer);
+answer = sumPixel("drewgreen.png",10, 10);
+print(answer);

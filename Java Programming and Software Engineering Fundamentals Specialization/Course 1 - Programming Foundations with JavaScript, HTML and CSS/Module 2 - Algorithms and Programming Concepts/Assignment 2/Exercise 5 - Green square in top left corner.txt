@@ -1,0 +1,20 @@
+// write your code here
+
+function redImage(inputImage, xPos, yPos){
+    
+    var newImage = new SimpleImage(inputImage);
+    
+    for(var pixel of newImage.values()){
+        
+        if(pixel.getX() < xPos && pixel.getY() < yPos){
+        
+            pixel.setRed(0);
+            pixel.setGreen(255);
+            pixel.setBlue(0);
+        }
+    }
+    return newImage;
+}
+    
+
+print(redImage("chapel.png", 50, 50));
