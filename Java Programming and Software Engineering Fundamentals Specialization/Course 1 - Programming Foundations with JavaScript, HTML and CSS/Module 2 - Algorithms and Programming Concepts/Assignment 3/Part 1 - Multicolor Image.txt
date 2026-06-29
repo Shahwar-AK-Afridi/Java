@@ -1,0 +1,34 @@
+/*  Write a JavaScript program that modifies an image by putting three vertical stripes on it - a red stripe on the left one third, a green stripe in the middle, and a blue stripe on the right one third. For example, if your program ran on Drew’s picture shown on the left, the resulting image would have red, green and blue vertical stripes as shown in the image on the right.
+
+The red stripe is made by changing the red component of all the pixels in the left vertical third to 255, while leaving the green and blue components as their values in the original image. The green and blue stripes are made similarly, but instead of modifying the red component of each pixel in the correct part of the image you will modify the green or blue component. 
+*/
+
+function doMultiColor(image){
+    
+    var currentImage = new SimpleImage(image);
+    
+    var widthOfImage = currentImage.getWidth();
+    
+    for(var pixel of currentImage.values()){
+        
+        if(pixel.getX() < (widthOfImage/3)){
+            
+            pixel.setRed(255);
+            
+        }
+        else if(pixel.getX() >= (widthOfImage/3) && pixel.getX() < (widthOfImage *(2/3))){
+            
+            pixel.setGreen(255);
+            
+        }
+        else{
+            
+            pixel.setBlue(255);
+            
+        }
+        
+    }
+    return currentImage;
+}
+
+print(doMultiColor("hilton.jpg"));

@@ -1,0 +1,26 @@
+/*Write a JavaScript function named swapRedGreen with one parameter pixel (representing a single pixel). This function should swap the red and green values of the pixel. For example, if you have a pixel with red = 255, green = 100, blue = 150, after calling swapRedGreen on that pixel its new RGB values would be red = 100, green = 255, blue = 150. 
+
+To test your function, you should choose an image and apply the swapRedGreen function to every pixel in the image. The choice of your image is important. For some images you may not notice any change. What would happen if you used a completely black image, or a completely white image? What about an image with lots of red and not a lot of green? Think about what type of image you should use for testing your function. After choosing an image and applying the swapRedGreen function to every pixel in the image, make sure you print the resulting image so you can see whether your function worked correctly.  */
+
+function swapRedGreen(pixel){   //Helper Function
+    
+    var temp = pixel.getRed()
+    pixel.setRed(pixel.getGreen());
+    pixel.setGreen(temp);
+    
+}
+
+function testSwapRedGreen(image){
+    
+    var currentImage = new SimpleImage(image);
+    
+    print(currentImage);
+    for(var pixel of currentImage.values()){
+        
+        swapRedGreen(pixel);
+    
+    }
+    print(currentImage);
+}
+
+testSwapRedGreen("smallpanda.png");
