@@ -1,6 +1,26 @@
-/*Write the green screen algorithm you saw in the lecture video yourself. To make sure you really understand the code that was written in the video, you should write the code yourself without looking at the video unless you get stuck and need to refer back to it for a hint. 
+/*
+Write the green screen algorithm you saw in the lecture video yourself. To make sure you really understand the code that was written in the video, you should write the code yourself without looking at the video unless you get stuck and need to refer back to it for a hint.
 */
 
-var bgImage = new SimpleImage("drewRobert.png"); 
+var bgImage = new SimpleImage("drewRobert.png");
+var fgImage = new SimpleImage("dinos.png");
+var outputImage = new SimpleImage(bgImage.getWidth(),bgImage.getHeight());
 
-print(bgImage);
+for(var pixel of bgImage.values()){
+    
+    if(pixel.getGreen() > (pixel.getRed()+pixel.getBlue())){
+        
+        var x = pixel.getX();
+        var y = pixel.getY();
+        var fgImagePixel = fgImage.getPixel(x,y);
+        outputImage.setPixel(x,y,fgImagePixel)
+        
+    }
+    else{
+        
+        outputImage.setPixel(pixel.getX(),pixel.getY(),pixel);
+        
+    }
+
+}
+print(outputImage);
