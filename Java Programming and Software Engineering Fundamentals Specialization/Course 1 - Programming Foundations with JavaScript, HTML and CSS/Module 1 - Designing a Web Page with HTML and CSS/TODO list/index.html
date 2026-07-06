@@ -7,7 +7,8 @@
         <script src="script.js"></script>
     </head>
     <body>
-        <h1 id="myHeader">TO DO List</h1>
+       
+ <h1 id="myHeader">TO DO List</h1>
 
 <!-- STEPs 1 and 2 below here  -->
 <input type="button" id="addButton" value="Add" onclick="addTask()"/>
@@ -22,7 +23,8 @@
     <input type="button" class="done" onclick="markDone(this.parentNode)" value="&#x2713;" />
 
     <input type="button" class="remove" onclick="remove(this.parentNode)" value="&#x2715;" />
-
+  
+    <input type="button" class="important" onclick="important(this.parentNode)" value="&#33;"/>
     make todo list
 
   </li>
@@ -41,5 +43,7 @@
 <!-- STEP 13 below here  -->
 
 <input type="button" id="clear" value="Clear" onclick="clearAbout()"/>
+
+
     </body>
 </html>
