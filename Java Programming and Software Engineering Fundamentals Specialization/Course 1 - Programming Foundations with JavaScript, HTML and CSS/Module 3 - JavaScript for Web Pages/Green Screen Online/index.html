@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="./style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pen</title>
+  </head>
+  <body>
+    <script src="./script.js"></script>
+        <script src="https://www.dukelearntoprogram.com/course1/common/js/image/SimpleImage.js"></script>
+    <h1>Green Screen Online</h1>
+    <canvas id="canvas1"></canvas>
+    <canvas id="canvas2"></canvas>
+    <p>
+      Foreground:
+    <input type="file" id= "fgfile" accept = "image/*" onchange ="loadForegroundImage()">
+    </p>
+    <p>
+      Background:
+      <input type="file" id = "bgfile" 
+        accept = "image/*" onchange="loadBackgroundImage()">
+    </p>
+    <p>
+      <input type="button" value="Create Composite" onclick="doGreenScreen()"/>
+      <input type="button" value="Clear Canvases" onclick="clearCanvas()"/>
+    </p>
+  </body>
+</html>
