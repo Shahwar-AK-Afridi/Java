@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="./style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MiniProject: Image Filters on the Web</title>
+    <script src="./script.js"></script>
+    <script src="https://www.dukelearntoprogram.com/course1/common/js/image/SimpleImage.js"></script>
+  </head>
+  <body>
+      <h1>Filter Fun</h1>
+      <canvas id="idCanvas"></canvas>
+      <h2>Load Image</h2>
+      <input type="file" id="btnUpload" accept="image/*" onchange="loadImage()">
+      <h2>Choose Filter</h2>
+    <p>
+    <input type="button" id="btnGrayscale" value="Grayscale" onclick="convertToGrayscale()">
+    <input type="button" id="btnRed" value="Red" onclick="convertToRed()">
+    <input type="button" id="btnRainbow" value="Rainbow" onclick="convertToRainbow()">
+    <input type="button" id="btnBlur" value="Blur" onclick="convertToBlur()">
+    </p>
+    <input type="button" id="btnResetImage" value="Reset Image" onclick="resetToOriginal()">
+  </body>
+</html>
