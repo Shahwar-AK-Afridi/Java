@@ -77,6 +77,8 @@ public class CaesarCipher {
     
     String answer = encryptTwoKeys("First Legion",23,17);
     System.out.println(answer);
+    answer = encryptTwoKeys("At noon be in the conference room with your hat on for a surprise party. YELL LOUD!",8,21);
+    System.out.println(answer);
     
     }
     public void testencrypt(){
@@ -85,7 +87,8 @@ public class CaesarCipher {
     System.out.println(answer);
     answer = encrypt("First Legion",17);
     System.out.println(answer);
-    
+    answer = encrypt("At noon be in the conference room with your hat on for a surprise party. YELL LOUD!",15);
+    System.out.println(answer);
     }
         
     public void testCaesar(){
