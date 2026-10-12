@@ -70,9 +70,9 @@ public class CaesarBreaker {
         int dKey = maxDex - 4;               //"4" because we take "e" as most used letter in english
         if(maxDex < 4){
         
-            dKey = 26 - (4-maxDex);
+            dKey = (26 - (4-maxDex)) % 26;
         }
-        return cc.encrypt(encrypted,26 - dKey);
+        return cc.encrypt(encrypted,(26 - dKey) % 26);
     }
     
     public void testDecrypt(){
@@ -113,7 +113,7 @@ public class CaesarBreaker {
         int[] frequencies = countLetters(s);
         int maxLetterIndex = maxIndex(frequencies);
         
-        int key = maxLetterIndex - 4;
+        int key = (maxLetterIndex - 4+ 26) % 26;
         return key; 
     } 
     
@@ -121,9 +121,10 @@ public class CaesarBreaker {
     
         String first = halfOfString(encrypted,0);
         int firstKey = getKey(first);
+        
         String second = halfOfString(encrypted,1);
         int secondKey = getKey(second);
-        
+                
         System.out.println("First Key: "+firstKey);
         System.out.println("Second Key: "+secondKey);
         
@@ -136,10 +137,10 @@ public class CaesarBreaker {
     public void testDecryptTwoKeys() {
 
     String original = "Here we see the green trees where the bees meet near the creek, and everyone cheers.";
-
+    
     CaesarCipher cc = new CaesarCipher();
 
-    String encrypted = cc.encryptTwoKeys(original, 23, 17);
+    String encrypted = cc.encryptTwoKeys(original, 2, 20);
 
     String decrypted = decryptTwoKeys(encrypted);
 
@@ -148,5 +149,6 @@ public class CaesarBreaker {
     System.out.println("Decrypted: " + decrypted);
 
     System.out.println("Test Passed: " + original.equals(decrypted));
-}
+    
+    }
 }
