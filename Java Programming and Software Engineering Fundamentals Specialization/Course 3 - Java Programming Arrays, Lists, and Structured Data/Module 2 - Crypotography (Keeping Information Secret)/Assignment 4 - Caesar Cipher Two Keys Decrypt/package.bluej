@@ -2,10 +2,10 @@
 dependency1.from=CaesarBreaker
 dependency1.to=CaesarCipher
 dependency1.type=UsesDependency
-editor.fx.0.height=1048
-editor.fx.0.width=1936
-editor.fx.0.x=-8
-editor.fx.0.y=-8
+editor.fx.0.height=830
+editor.fx.0.width=1550
+editor.fx.0.x=1912
+editor.fx.0.y=-92
 objectbench.height=93
 objectbench.width=760
 package.divider.horizontal=0.6
