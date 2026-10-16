@@ -1,0 +1,10 @@
+#BlueJ class context
+comment0.target=CaesarCipher
+comment0.text=\r\n\ Write\ a\ description\ of\ CaesarCipher\ here.\r\n\ In\ this\ assignment,\ you\ will\ put\ together\ the\ CaesarCipher\ class\ from\ the\ lesson\ and\ add\ a\ decrypt\ method\ to\ decrypt\ with\ the\ same\ key.\ In\ addition\ you\ will\ create\ a\ second\ class,\ TestCaesarCipher\ to\ test\ examples\ that\ use\ the\ CaesarCipher\ class,\ including\ writing\ a\ method\ that\ will\ automatically\ decrypt\ an\ encrypted\ file\ by\ determining\ the\ key\ and\ then\ decrypting\ with\ that\ key.\r\n\ @author\ (Shahwar\ Afridi)\ \r\n\ @version\ (16/10/2026)\r\n
+comment1.params=key
+comment1.target=CaesarCipher(int)
+comment2.params=input
+comment2.target=java.lang.String\ encrypt(java.lang.String)
+comment3.params=input
+comment3.target=java.lang.String\ decrypt(java.lang.String)
+numComments=4
