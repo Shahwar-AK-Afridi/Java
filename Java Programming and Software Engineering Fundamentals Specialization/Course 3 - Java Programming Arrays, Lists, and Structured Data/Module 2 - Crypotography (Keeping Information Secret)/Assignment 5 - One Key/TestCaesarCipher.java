@@ -26,11 +26,6 @@ public class TestCaesarCipher {
                 }
                 
          }
-           for(int j = 0; j<letterFrequency.length;j++){
-            
-             System.out.println(letterFrequency[j]);
-            
-        }
         return letterFrequency;
         
     }
@@ -77,10 +72,10 @@ public class TestCaesarCipher {
         System.out.println(encryptedText);
         
         String decryptText = cc.decrypt(encryptedText);
-        System.out.println(decryptText);
+        System.out.println("Normal Decryption:"+decryptText);
         
         String decryptedText2 = breakCaesarCipher(encryptedText);
-        System.out.println(decryptedText2);
+        System.out.println("Frequency Based Decryption:"+decryptedText2);
     }
 }
 
