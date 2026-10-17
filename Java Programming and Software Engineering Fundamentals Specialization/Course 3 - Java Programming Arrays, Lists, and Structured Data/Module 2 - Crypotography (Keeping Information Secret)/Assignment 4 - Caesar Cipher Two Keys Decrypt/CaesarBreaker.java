@@ -11,7 +11,7 @@ public class CaesarBreaker {
     
     public int[] countLetters(String word){
         
-        String alphabets = "abcdefghijklmonpqrstuvwxyz";
+        String alphabets = "abcdefghijklmnopqrstuvwxyz";
         int[] letterFrequency = new int[26];
         
         for(int i = 0; i< word.length(); i++){
@@ -25,11 +25,6 @@ public class CaesarBreaker {
                   letterFrequency[indexOfLetter] += 1;  
             }
             
-        }
-        for(int j = 0; j<letterFrequency.length;j++){
-        
-           System.out.println(letterFrequency[j]);
-        
         }
         return letterFrequency;
     }
