@@ -9,7 +9,7 @@
 import edu.duke.*;
 public class TestCaesarCipherTwo {
     
-    public int[] countLetters(String word){
+    private int[] countLetters(String word){
         
         String alphabets = "abcdefghijklmnopqrstuvwxyz";
         int[] letterFrequency = new int[26];
@@ -29,7 +29,7 @@ public class TestCaesarCipherTwo {
         return letterFrequency;
     }
     
-    public int maxIndex(int[] letterFrequency){
+    private int maxIndex(int[] letterFrequency){
     
         int largestSoFar = 0;
         for(int i = 0; i < letterFrequency.length;i++){
@@ -44,7 +44,7 @@ public class TestCaesarCipherTwo {
         return largestSoFar;
     }
     
-    public String halfOfString(String message, int start){
+    private String halfOfString(String message, int start){
     
         StringBuilder newString = new StringBuilder();
         for(int i = start; i<message.length(); i = i + 2){
@@ -54,7 +54,7 @@ public class TestCaesarCipherTwo {
     return newString.toString();
     }
     
-    public int getKey(String s){  //Remember that getKey() estimates the encryption key by assuming "e" was the most frequent letter in the original text
+    private int getKey(String s){  //Remember that getKey() estimates the encryption key by assuming "e" was the most frequent letter in the original text
     
         int[] frequencies = countLetters(s);
         int maxLetterIndex = maxIndex(frequencies);
