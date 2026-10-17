@@ -130,7 +130,15 @@ public class CaesarBreaker {
     }
     
     public void testDecryptTwoKeys() {
-
+        
+    FileResource fr = new FileResource();    
+    
+    String encryptedText = fr.asString();
+    
+    String assignmentDecryptionText = decryptTwoKeys(encryptedText); //mysteryTwoKeysPractice.txt
+    
+    System.out.println("Assignment Answer: "+assignmentDecryptionText); 
+    
     String original = "Here we see the green trees where the bees meet near the creek, and everyone cheers.";
     
     CaesarCipher cc = new CaesarCipher();
@@ -138,7 +146,7 @@ public class CaesarBreaker {
     String encrypted = cc.encryptTwoKeys(original, 2, 20);
 
     String decrypted = decryptTwoKeys(encrypted);
-
+    
     System.out.println("Original: " + original);
     System.out.println("Encrypted: " + encrypted);
     System.out.println("Decrypted: " + decrypted);
