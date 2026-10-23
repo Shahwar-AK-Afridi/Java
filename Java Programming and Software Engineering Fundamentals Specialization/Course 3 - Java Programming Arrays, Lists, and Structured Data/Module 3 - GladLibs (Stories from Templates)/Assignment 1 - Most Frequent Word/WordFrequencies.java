@@ -78,5 +78,11 @@ public class WordFrequencies {
         System.out.println("Frequency: " + frequencyOfWord);
 
     }
+    
+    public static void main(String[] args) {
+
+        WordFrequencies wf = new WordFrequencies();
+        wf.tester();
+    }
 }
 
