@@ -66,7 +66,7 @@ public class WordFrequencies {
     
         for(int i = 0; i < myWords.size(); i++){
     
-            System.out.println(myFreqs.get(i) + " " + myWords.get(i));
+            //System.out.println(myFreqs.get(i) + " " + myWords.get(i));
         }
     
         int index = findIndexOfMax();

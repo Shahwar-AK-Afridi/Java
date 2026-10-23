@@ -70,10 +70,10 @@ public class CharactersInPlay {
             
             if(this.countOfCharacters.get(i) > 1){
                 
-                System.out.println(this.nameOfCharacters.get(i) +" "+this.countOfCharacters.get(i));
+                //System.out.println(this.nameOfCharacters.get(i) +" "+this.countOfCharacters.get(i));
             }
         }
-        this.charactersWithNumParts(10,50);
+        this.charactersWithNumParts(10,15);
     }
     
   
